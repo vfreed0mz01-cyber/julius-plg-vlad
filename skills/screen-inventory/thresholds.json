@@ -1,0 +1,117 @@
+{
+  "_comment": "Пороги инвентаря экрана по профилю плотности (скилл screen-inventory, 23.10). Профиль выбирается в карте композиции (screen-composition). Модификатор premium ужесточает. Значения — стартовые, калибруются по живым экранам Влада (режим Б: таблица всегда идёт Владу, экран не возвращается автоматически). 0.6.1 (ресерч 23.10, v2/research/agents-premium-ui-2026-10-23.md): недобор — void_pct / blank_gap (Taste rules.mjs, Hallmark 77/79); плотность B2B — row_h 36–53, lead_ratio ≥ 1.3, icon_chips 0, кеглей 4–9 (Taste app-screens.md, профиль 23 дашбордов).",
+  "profiles": {
+    "mobile-card": {
+      "weights_max": 3,
+      "sizes_max": 5,
+      "size_contrast_min": 1.8,
+      "greys_max": 3,
+      "text_colors_max": 4,
+      "radius_classes_max": 3,
+      "accent_hues_max": 2,
+      "shadow_nodes_max": 3,
+      "double_dress_max": 0,
+      "stroke_weights_max": 1,
+      "same_pair_run_max": 2,
+      "clone_siblings_max": 2,
+      "heroes_max": 1,
+      "primary_buttons_max": 1,
+      "control_row_height_tol": 2,
+      "unbound_pct_max": 10,
+      "void_pct_max": 45,
+      "blank_gap_max": 72,
+      "lead_ratio_min": 1.3,
+      "icon_chips_max": 4,
+      "row_h_range": null
+    },
+    "desktop-table": {
+      "weights_max": 3,
+      "sizes_max": 7,
+      "size_contrast_min": 2.0,
+      "greys_max": 3,
+      "text_colors_max": 4,
+      "radius_classes_max": 2,
+      "accent_hues_max": 1,
+      "shadow_nodes_max": 1,
+      "double_dress_max": 0,
+      "stroke_weights_max": 1,
+      "same_pair_run_max": 99,
+      "clone_siblings_max": 99,
+      "heroes_max": 1,
+      "primary_buttons_max": 1,
+      "control_row_height_tol": 0,
+      "unbound_pct_max": 10,
+      "void_pct_max": 35,
+      "blank_gap_max": 48,
+      "lead_ratio_min": 1.3,
+      "icon_chips_max": 0,
+      "row_h_range": [
+        36,
+        53
+      ]
+    },
+    "desktop-dense": {
+      "weights_max": 3,
+      "sizes_max": 7,
+      "size_contrast_min": 1.6,
+      "greys_max": 3,
+      "text_colors_max": 4,
+      "radius_classes_max": 2,
+      "accent_hues_max": 2,
+      "shadow_nodes_max": 1,
+      "double_dress_max": 0,
+      "stroke_weights_max": 1,
+      "same_pair_run_max": 99,
+      "clone_siblings_max": 99,
+      "heroes_max": 1,
+      "primary_buttons_max": 1,
+      "control_row_height_tol": 0,
+      "unbound_pct_max": 10,
+      "void_pct_max": 25,
+      "blank_gap_max": 40,
+      "lead_ratio_min": 1.3,
+      "icon_chips_max": 0,
+      "row_h_range": [
+        32,
+        48
+      ]
+    }
+  },
+  "modifiers": {
+    "premium": {
+      "size_contrast_min": 2.5,
+      "accent_hues_max": 1,
+      "shadow_nodes_max": 0,
+      "radius_classes_max": 2,
+      "lead_ratio_min": 1.6,
+      "by_profile": {
+        "desktop-table": {
+          "size_contrast_min": 4.0
+        },
+        "desktop-dense": {
+          "size_contrast_min": 3.0
+        }
+      }
+    },
+    "layered": {
+      "shadow_nodes_max": 6,
+      "double_dress_max": 2
+    }
+  },
+  "neutral_chroma_max": 0.06,
+  "hue_cluster_deg": 18,
+  "hero_min_side": 120,
+  "control_names": [
+    "button",
+    "btn",
+    "chip",
+    "tab",
+    "input",
+    "field",
+    "pill",
+    "cta",
+    "filter"
+  ],
+  "_comment_076": "0.7.6 (✓ Влад 07.11): size_contrast = герой / основной (не макс/мин, хром не влияет); база mobile 1.8 (iOS Large Title 34/17 = 2.0), премиум mobile 2.5 (Apple Wallet ≈ 2.4), премиум десктоп / журнальный 4.0 (by_profile). Стиль считается без узлов внутри экземпляров DS.",
+  "_comment_077": "0.7.7 (✓ Влад 07.11, сравнение со Stageshow): weights_max 3 — третий вес у заголовка экрана и сумм по рефам."
+}

@@ -1,0 +1,12 @@
+{
+  "name": "vlad-design",
+  "owner": { "name": "Vlad" },
+  "plugins": [
+    {
+      "name": "design-team",
+      "source": "./",
+      "description": "Команда дизайнера: спека → вайрфреймы → ресерч → дизайн → критик (Figma, RTL / иврит, mobile + web)."
+    }
+  ],
+  "metadata": { "description": "Плагины Влада: команда дизайнера design-team." }
+}
